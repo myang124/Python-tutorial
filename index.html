@@ -13107,7 +13107,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font face="Verdana, Geneva, sans-serif" size="3px">There are approximately ~196 million licensed drivers in the U.S currently, and on average there are about ~41 million speeding tickets issued totaling in about ~$6 billion dollars in ticket fines each year<a href="https://jeffdavislawfirm.com/traffic-ticket-statistics/">(Traffic Ticket Statistics)</a>. The overall objective for this tutorial will be to focus on the traffic violations that happen specifically in Montgomery County, Maryland. Why Montgomery County? Montgomery County has some of the most heavily enforced traffic laws because it encounters all kinds of out of state drivers. Montgomery County is right on the border of DC and Maryland, so out of state drivers include D.C drivers, Virgina drivers, and in state residents as well<a href="https://maryland-criminallawyer.com/montgomery-county-criminal/traffic-lawyer/enforcement/">(Maryland Traffic)</a>.</p>
-<p>This tutorial will focus on the traffic violations happening in Montgomery County Maryland; more specifically we will be looking at the kind of citations that are being issued, when and where that are happening, the demographic, and much more. Through the information given the dataset released by Montgomery County<a href="https://data.montgomerycountymd.gov/Public-Safety/Traffic-Violations-API/y8ms-hri9">(Montgomery County Traffic Violations)</a>, we will look at certain trends and see if there are any correlations within the given data.&lt;/font&gt;</p>
+<p>This tutorial will focus on the traffic violations happening in Montgomery County Maryland; more specifically we will be looking at the kind of citations that are being issued, when and where that are happening, the demographic, and much more. Through the information given the dataset released by Montgomery County<a href="https://data.montgomerycountymd.gov/Public-Safety/Traffic-Violations-API/y8ms-hri9">(Montgomery County Traffic Violations)</a>, we will look at certain trends and see if there are any correlations within the given data.</p>
 
 </div>
 </div>
@@ -13130,7 +13130,7 @@ div#notebook {
 <li>BeautifulSoup: Used for retrieving data from HTML and XML files</li>
 <li>Pandas: Used for data manipulation and analysis</li>
 <li>decimal: Used for floating point arithmetic</li>
-<li>matplotlib: Used for plotting data onto graphs.&lt;/font&gt;</li>
+<li>matplotlib: Used for plotting data onto graphs.</li>
 </ol>
 
 </div>
@@ -13171,8 +13171,8 @@ Requirement already satisfied: six&gt;=1.9 in /opt/conda/lib/python3.8/site-pack
 Requirement already satisfied: sodapy in /opt/conda/lib/python3.8/site-packages (2.1.0)
 Requirement already satisfied: requests&gt;=2.20.0 in /opt/conda/lib/python3.8/site-packages (from sodapy) (2.24.0)
 Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /opt/conda/lib/python3.8/site-packages (from requests&gt;=2.20.0-&gt;sodapy) (1.25.10)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/conda/lib/python3.8/site-packages (from requests&gt;=2.20.0-&gt;sodapy) (2020.6.20)
 Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /opt/conda/lib/python3.8/site-packages (from requests&gt;=2.20.0-&gt;sodapy) (3.0.4)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/conda/lib/python3.8/site-packages (from requests&gt;=2.20.0-&gt;sodapy) (2020.6.20)
 Requirement already satisfied: idna&lt;3,&gt;=2.5 in /opt/conda/lib/python3.8/site-packages (from requests&gt;=2.20.0-&gt;sodapy) (2.10)
 </pre>
 </div>
@@ -13199,15 +13199,14 @@ Requirement already satisfied: idna&lt;3,&gt;=2.5 in /opt/conda/lib/python3.8/si
 <li>Third, we will place(in this case the first 100,000 traffic violation cases) into a Pandas Dataframe. The reason we are using Pandas Dataframe is because it will allow us to view, edit, and format to our liking.</li>
 </ol>
 <p>A Pandas Dataframe is comparable to a matrix/table with rows and columns. The difference with a Pandas Dataframe and a normal table is that Pandas allows us to manipulate the dataframe however we want to. For example, the dataset we retrieved had over 1.6 million rows with over 35 columns; instead we filtered the data so that we only look at the first 100,000 rows.
-You should be familiar with Pandas and its functions, start by familiarizing yourself with <a href="https://pandas.pydata.org/docs/user_guide/10min.html#min">this</a>.
-&lt;/font&gt;</p>
+You should be familiar with Pandas and its functions, start by familiarizing yourself with <a href="https://pandas.pydata.org/docs/user_guide/10min.html#min">this</a>.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">Socrata</span><span class="p">(</span><span class="s2">&quot;data.montgomerycountymd.gov&quot;</span><span class="p">,</span> <span class="s1">&#39;IXCx2ihjCYo4RF9slAVzYL2x9&#39;</span><span class="p">)</span> <span class="c1">#Step 1, set up connection</span>
@@ -13226,7 +13225,7 @@ You should be familiar with Pandas and its functions, start by familiarizing you
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -13304,7 +13303,7 @@ You should be familiar with Pandas and its functions, start by familiarizing you
       <td>08:56:00</td>
       <td>MCP</td>
       <td>4th District, Wheaton</td>
-      <td>DRIVER CHANGING LANES WHEN UNSAFE</td>
+      <td>FAILURE TO DISPLAY REGISTRATION CARD UPON DEMA...</td>
       <td>NORBECK RD / NADINE DR</td>
       <td>39.095845</td>
       <td>-77.1108883333333</td>
@@ -13328,7 +13327,7 @@ You should be familiar with Pandas and its functions, start by familiarizing you
       <td>08:56:00</td>
       <td>MCP</td>
       <td>4th District, Wheaton</td>
-      <td>FAILURE TO DISPLAY REGISTRATION CARD UPON DEMA...</td>
+      <td>DRIVER CHANGING LANES WHEN UNSAFE</td>
       <td>NORBECK RD / NADINE DR</td>
       <td>39.095845</td>
       <td>-77.1108883333333</td>
@@ -13987,7 +13986,7 @@ You should be familiar with Pandas and its functions, start by familiarizing you
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fd3fc597670&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7faca8308d90&gt;</pre>
 </div>
 
 </div>
@@ -14179,7 +14178,7 @@ You should be familiar with Pandas and its functions, start by familiarizing you
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fd3fa860ac0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7faca65e0af0&gt;]</pre>
 </div>
 
 </div>
@@ -14205,13 +14204,99 @@ You should be familiar with Pandas and its functions, start by familiarizing you
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">coef_</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[-262.53928571]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">15</span><span class="p">]])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[860.29166667]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">monthArr</span><span class="p">,</span> <span class="n">countArr</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.40875989891804354</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
